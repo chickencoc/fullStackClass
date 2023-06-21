@@ -30,6 +30,11 @@ function App() {
       clearInterval(listRef.current);
     };
   });
+
+  function moreBtn() {
+    const modal = document.getElementById("modal");
+    modal.style.left = "0vw";
+  }
   
 
   return (
@@ -45,8 +50,9 @@ function App() {
         <h1 id="date">{time.getMonth() + 1}/{time.getDate()}</h1>
       </div>
       <div id="btnBox">
-        <button id="moreInfo">더보기</button>
+        <button id="moreInfo" onClick={moreBtn}>더보기</button>
       </div>
+      <div id="modal"></div>
     </div>
   )
 }
