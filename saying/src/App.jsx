@@ -8,7 +8,7 @@ function App() {
   const [num, setNum] = useState(0);
 
   useEffect(() => {
-    fetch("../sList.json")
+    fetch("https://chickencoc.github.io/saying/sList.json")
     .then(res => res.json())
     .then(data => setList(data));
   },[])

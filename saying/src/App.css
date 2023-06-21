@@ -33,11 +33,12 @@ background-repeat: no-repeat;}
 #btnBox #moreInfo { padding: 0.4rem 2.5rem; border: none; border-radius: 20px; }
 
 @media (max-width: 420px) {
+  body { background-position: 98% 36%;}
   #container {
     height: 100vh;
     margin: 0 auto;
     padding: 2.5rem 2rem;
-    display: flex; flex-direction: column-reverse; justify-content: space-between;
+    display: flex; flex-direction: column-reverse; justify-content: space-evenly;
     color: #fff;
   }
 
@@ -47,6 +48,6 @@ background-repeat: no-repeat;}
   #info #day { font-size: 1.1em;}
   #info #date { font-size: 5em; line-height: 7rem;}
 
-  #btnBox { width: 100%; position: absolute; right: 0; text-align: center; left: 50%; bottom: 10%; transform: translateX(-50%);}
+  #btnBox { width: 100%; position: absolute; right: 0; text-align: center; left: 50%; bottom: 8%; transform: translateX(-50%);}
   #btnBox #moreInfo { padding: 0.4rem 2.5rem; border: none; border-radius: 20px; }
 }
