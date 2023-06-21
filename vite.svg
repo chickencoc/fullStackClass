@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        font-size: 200px;
+        font-family: "Cafe24 Ssurround";
+        font-weight: 700;
+      }
+
+      .cls-1 {
+        fill: #688dea;
+      }
+
+      .cls-2 {
+        fill: #2a5bd6;
+      }
+
+      .cls-3 {
+        fill: #243c79;
+      }
+    </style>
+  </defs>
+  <text id="esd" class="cls-1" transform="matrix(1.014, 0, 0.116, 1.088, -8.723, 153.837)">Ｎ</text>
+  <text id="_copy" data-name="Ｎ copy" class="cls-2" transform="matrix(1.014, 0, 0.116, 1.088, 8.316, 161.45)">Ｎ</text>
+  <text id="_" data-name="Ｎ" class="cls-3" transform="matrix(1.014, 0, 0.116, 1.088, 22.313, 169.063)">Ｎ</text>
+</svg>
