@@ -15,8 +15,6 @@ function App() {
     fetch(url)
       .then(res => res.json()) // json 포맷으로 변경
       .then(data =>{
-        //if(data.cod === "404") return;
-        //if(data.cod === "404") return;
         setWeather(data);
         console.log(data);
       })

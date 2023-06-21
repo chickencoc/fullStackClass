@@ -20,4 +20,4 @@ ul, li { list-style: none;}
 
 #result { min-height: 20vh; letter-spacing: 1px;}
 #result p { margin: 0.5em;}
-#result li {text-align: left; padding: 3px 0;}
+#result li {text-align: left; padding: 3px 0; }

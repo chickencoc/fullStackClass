@@ -6,7 +6,7 @@ const Result = ({weather}) => {
         <p>{"[ Текущая погода ]"}</p>
         {
         weather.cod == "404" &&
-        <p style={{color:"red"}}>- {weather.message}</p>
+        <p style={{color:"red"}}>{weather.message}</p>
         }
         {
         weather.cod == "200" &&
