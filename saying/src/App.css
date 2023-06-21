@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-size: 18px; font-family: 'Gowun Dodum', sans-serif;}
+
+body {background-image: url("/image/background.jpg"); background-color: #0006; background-blend-mode: multiply; background-position: right;
+background-repeat: no-repeat;}
+
+#container {
+  max-width: 1700px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 6rem 5rem;
+  display: flex; flex-direction: column; justify-content: space-between;
+  color: #fff;
+}
+
+#content.animation { animation: fadein 1.5s;}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#content article { width: 50%; font-size: 1.15rem; word-break: keep-all;}
+
+#info #day { font-size: 1.7em;}
+#info #date { font-size: 9em; line-height: 10rem;}
+
+
+#btnBox { position: absolute; right: 5rem; bottom: 8rem;}
+#btnBox #moreInfo { padding: 0.4rem 2.5rem; border: none; border-radius: 20px; }
+
+@media (max-width: 420px) {
+  #container {
+    height: 100vh;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    display: flex; flex-direction: column-reverse; justify-content: space-between;
+    color: #fff;
+  }
+
+  #content article { width: 100%; height: 45vh; margin-bottom: 5rem; font-size: 0.9em;}
+
+  #info { position: static; text-align: center;}
+  #info #day { font-size: 1.1em;}
+  #info #date { font-size: 5em; line-height: 7rem;}
+
+  #btnBox { width: 100%; position: absolute; right: 0; text-align: center; left: 50%; bottom: 10%; transform: translateX(-50%);}
+  #btnBox #moreInfo { padding: 0.4rem 2.5rem; border: none; border-radius: 20px; }
+}
