@@ -35,7 +35,7 @@ function App() {
         <h1>" Применение погоды "</h1>
       </div>
       <div id="mid">
-        <Search handleOnKeyDown={handleOnKeyDown} />
+        <Search handleOnKeyDown={handleOnKeyDown} setLocation={setLocation} />
         <Result weather={weather} />
       </div>
     </div>
