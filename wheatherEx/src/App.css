@@ -8,10 +8,12 @@ font-family: 'Orbit', sans-serif;
 :root {
     --cBlue: #487fc7;
     --cCCC: #ccc;
+    --Moon: url("./assets/moonDark.png")
 }
 :root .darkmode {
     --cBlue: #555;
     --cCCC: #444;
+    --Moon: url("./assets/moonLight.png")
 }
 
 /* BASE */
@@ -28,14 +30,16 @@ button:active { box-shadow: 2px 2px 3px 1px #444 inset; color: #444; }
 
 /* Header */
 #header { width: 100%; height: 35px; } 
-#headerBtnBox { width: 60%; height: 100%; margin: 0 auto; display: flex; justify-content: right; align-items: center; position: relative; } 
-#headerBtnBox :is(a, img) { width: 35px; height: 35px; } 
-#darkModeBtn { margin-right: 55px; padding: 0 1px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 10px; box-shadow: 0 0 3px 1px var(--cCCC); } 
-#darkModeBtn #imgDarkMode { content: url("./assets/moon.svg"); } 
-/* 35 - 113 */
-#langBtnsCover { height: 35px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 3px 1px var(--cCCC); overflow: hidden; position: absolute; top: 0; transition: height 0.3s ease-in-out; } 
+#headerBtnBox { width: 60%; height: 100%; margin: 0 auto; display: flex; justify-content: right; align-items: center; position: relative; }
+
+#darkModeBtn { width: 35px; height: 35px; margin-right: 55px; padding: 0 1px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 10px; box-shadow: 0 0 3px 1px var(--cCCC); }
+#darkModeBtn :is(a, img) { width: 28px; height: 28px; } 
+#darkModeBtn #imgDarkMode { content: var(--Moon); } 
+
+#langBtnsCover { height: 35px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 3px 1px var(--cCCC); overflow: hidden; position: absolute; top: 0; transition: height 0.3s ease-in-out; } /* 35 - 113 */
 #langBtnsCover:hover { height: 113px; } 
 #langBtns { padding: 0 6px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; } 
+#langBtns :is(a, img) { width: 35px; height: 35px; }
 #langBtns #imgLang1 { content: url("./assets/usa.png"); } 
 #langBtns #imgLang2 { content: url("./assets/uka.png"); } 
 #langBtns #imgLang3 { content: url("./assets/kor.png"); } 
