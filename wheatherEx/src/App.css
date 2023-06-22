@@ -18,14 +18,14 @@ font-family: 'Orbit', sans-serif;
 
 /* BASE */
 * { box-sizing: border-box; } 
-#root { max-width: 1280px; min-width: 1062px; margin: 0 auto; padding: 1rem; text-align: center; font-size: 30px; transition: all 0.3s ease; } 
+#root { max-width: 1280px; min-width: 1062px; min-height: 667px; margin: 0 auto; padding: 1rem; text-align: center; font-size: 30px; transition: all 0.3s ease; } 
 #container { font-family: 'Nanum Pen Script', 'Caveat', cursive; } 
 
 a, a:link, a:visited { text-decoration: none; } 
 ul, li { list-style: none; } 
 input { outline: none; background-color: transparent; } 
 button { padding: 0.1em 1em; border: none; border-radius: 5px; font-size: 0.8em; background-color: #487fc7; color: #ffffee; transition: all 0.2s; font-family: inherit; } 
-button:hover { box-shadow: 0 0 3px 1px var(--cCCC); } 
+button:hover { box-shadow: 0 0 3px 1px var(--cCCC); cursor: pointer; } 
 button:active { box-shadow: 2px 2px 3px 1px #444 inset; color: #444; } 
 
 /* Header */
@@ -61,7 +61,7 @@ button:active { box-shadow: 2px 2px 3px 1px #444 inset; color: #444; }
 @media (max-width: 420px) { 
  #root { min-width: 280px; padding: 1rem; font-size: 24px; } 
  ul, li { padding: 0; margin: 0; } 
- button { padding: 0.3em 1em; margin-top: 0.5em; } 
+ button { padding: 0.3em 1.2em; margin-top: 0.5em; } 
 
  #headerBtnBox { width: 100%; }
 
@@ -70,7 +70,10 @@ button:active { box-shadow: 2px 2px 3px 1px #444 inset; color: #444; }
 
  #mid { width: 100%; padding: 2rem 1rem; } 
  #mid #search { height: 16vh; flex-direction: column; justify-content: space-evenly; gap: 0; padding-bottom: 1rem; margin-bottom: 1rem; }
+ #search label { font-size: 1.1em; }
  #search input { width: 70%; }
+
+ #result { font-size: 1.1em; }
 }
 
 body { transition: all 0.2s ease-in-out; }

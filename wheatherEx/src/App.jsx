@@ -74,6 +74,7 @@ function App() {
       default:
         break;
     }
+    
   };
   const langChangeCoverMove = (cover) => {
     cover.style.height = "35px";
@@ -95,7 +96,7 @@ function App() {
       })
       .catch(() => console.error("error"));
   }
-  useEffect(() => {fetchWeather()},[location]);
+  useEffect(() => {fetchWeather()},[location, lang]);
   
   const handleOnKeyDown = e => {
     if (e.key === 'Enter') {
