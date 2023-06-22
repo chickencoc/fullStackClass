@@ -54,7 +54,7 @@ function App() {
         resultVisibility : "가시거리",
     },
   };
-  const [lang, setLang] = useState(langPack.eng);
+  const [lang, setLang] = useState(langPack.kor);
   const langChange = (n) => {
     let cover = document.getElementById("langBtnsCover");
     switch (n) {
