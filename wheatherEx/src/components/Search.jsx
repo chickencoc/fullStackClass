@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Search({handleOnKeyDown, setLocation}) {
+function Search({lang, handleOnKeyDown, setLocation}) {
   function click() {
     const searchInput = document.getElementById("abc");
     setLocation(searchInput.value);
@@ -8,8 +8,8 @@ function Search({handleOnKeyDown, setLocation}) {
 
   return (
     <div id="search">
-        <label htmlFor="abc">* Площадь :</label><input type="text" id="abc" placeholder="City Name" onKeyUp={handleOnKeyDown} />
-        <button onClick={click}>Поиск</button>
+        <label htmlFor="abc">* {lang.searchLabel} :</label><input type="text" id="abc" placeholder={lang.searchInputHolder} onKeyUp={handleOnKeyDown} />
+        <button id="searchBtn" onClick={click}>{lang.searchButton}</button>
   </div>
   )
 }

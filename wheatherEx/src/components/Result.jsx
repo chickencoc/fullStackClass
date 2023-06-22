@@ -1,21 +1,21 @@
 import React from 'react'
 
-const Result = ({weather}) => {
+const Result = ({lang, weather}) => {
   return (
     <div id="result">
-        <p>{"[ Текущая погода ]"}</p>
+        <p>{lang.resultTitle}</p>
         {
         weather.cod == "404" &&
-        <p style={{color:"red"}}>{weather.message}</p>
+        <p style={{color:"red"}}>{lang.error}</p>
         }
         {
         weather.cod == "200" &&
         <ul>
-            <li>* Country: {`( ${weather.sys.country} )`} {weather.name}</li>
-            <li>* Weather: {weather.weather[0].main} {`( ${weather.weather[0].description} )`}</li>
-            <li>* Temp: {(weather.main.temp - 273.15).toFixed(2)}ºC</li>
-            <li>* Humidity: {weather.main.humidity}%</li>
-            <li>* Visibility: {(weather.visibility / 1000).toFixed(2)}km</li>
+            <li>* {lang.resultCountry}:<span>{weather.name} {`( ${weather.sys.country} )`}</span></li>
+            <li>* {lang.resultWeather}:<span>{weather.weather[0].description}</span></li>
+            <li>* {lang.resultTemp}:<span>{weather.main.temp}°C</span></li>
+            <li>* {lang.resultHumidity}:<span>{weather.main.humidity}%</span></li>
+            <li>* {lang.resultVisibility}:<span>{(weather.visibility / 1000).toFixed(2)}km</span></li>
         </ul>
         }
     </div>
