@@ -23,7 +23,7 @@ function Detail() {
             <div id="countryInfomation">
                 <ul>
                     <li><h3>{item.name.common + " " + Object.values(item.translations)[lang.id].common}</h3></li>
-                    <li><h4>{lang.population}: </h4>{item.population}</li>
+                    <li><h4>{lang.population}: </h4>{item.population.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}</li>
                     <li><h4>{lang.region}: </h4>{item.region}</li>
                     <li><h4>{lang.capital}: </h4>{item.capital}</li>
                     <li><h4>{lang.subregion}: </h4>{item.subregion}</li>

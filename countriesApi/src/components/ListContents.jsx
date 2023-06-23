@@ -15,7 +15,7 @@ const ListContents = ( { item, lang } ) => {
                         }
                     </h2>
                     <ul>
-                        <li><h3>{lang.population}: </h3>{item.population}</li>
+                        <li><h3>{lang.population}: </h3>{item.population.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}</li>
                         <li><h3>{lang.region}: </h3>{item.region}</li>
                         <li><h3>{lang.capital}: </h3>{item.capital}</li>
                     </ul>
