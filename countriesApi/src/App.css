@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300; 400&display=swap'); 
+
+:root { 
+ --cText: hsl(200, 15%, 8%); 
+ --cInput: hsl(0, 0%, 52%); 
+ --cBackground: hsl(0, 0%, 98%); 
+ --cElement: hsl(0, 0%, 100%); 
+ --listContentsBoxImg : hsl(0, 0%, 90%); 
+ } 
+ 
+ :root .darkmode { 
+ --cText: hsl(0, 0%, 100%); 
+ --cInput: hsl(209, 23%, 22%); 
+ --cBackground: hsl(207, 26%, 17%); 
+ --cElement: hsl(209, 23%, 22%); 
+ --listContentsBoxImg: hsl(209, 23%, 22%); 
+ } 
+
+/* Base */
+* { padding: 0; margin: 0; box-sizing: border-box; font-size: 19px; font-family: 'Noto Sans KR', sans-serif; } 
+button { cursor: pointer; padding: 0.4rem 1rem; border: 2px solid; border-radius: 10px; background: var(--cElement); color: inherit; } 
+input { padding: 0.4rem 1rem; border-radius: 10px; } 
+input:focus { outline: none; } 
+ul, li { list-style: none; } 
+a, a:link, a:visited { text-decoration: none; color: inherit; } 
+
+/* container */
+#background { width: 100%; height: 100vh; background-color: var(--cBackground); color: var(--cText); } 
+#container { max-width: 1440px; margin: 0 auto; } 
+#container > * { padding: 0 0.8rem; } 
+
+/* header */
+header { width: 100%; height: 100px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--cInput); } 
+header > h1 { font-size: 1.5rem; } 
+
+/* search */
+main #searchBox { width: 100%; margin: 1.5rem 0; display: flex; justify-content: center; gap: 0.8rem; } 
+main #searchBox #searchInput { border: 1px solid var(--cInput); background-color: inherit; } 
+main #searchBox #searchBtn { border: 1px solid; } 
+
+/* list */
+main #countriesList { display: grid; grid-template-columns: repeat(4, 1fr); justify-items: center; gap: 2rem; } 
+main #countriesList #listContentsBox { width: 320px; box-shadow: 0 0 4px -1px var(--cInput); background-color: var(--cElement); } 
+main #countriesList #listContentsBox img { width: 100%; height: 180px; border-bottom: 1px solid var(--listContentsBoxImg); } 
+main #countriesList #listContentsBox #listContentsInfo { height: 180px; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center; } 
+main #countriesList #listContentsBox #listContentsInfo h2 { margin-bottom: 0.8rem; word-break: keep-all; }
+
+#countryDetailBox #toBack { margin: 1.5rem 0;}
+#countryDetailBox #countryCca2 h2 { font-size: 1.5rem; padding: 0.4rem 0; }
+#countryDetailBox #detailContents { width: 100%; display: flex; gap: 90px; }
+#countryDetailBox #detailContents #countryImg img { width: 720px;}
+#countryDetailBox #detailContents #countryInfomation h3 { font-size: 1.10rem; line-height: 2.8rem;}
+#countryDetailBox #detailContents #countryInfomation li { line-height: 1.5rem;}
