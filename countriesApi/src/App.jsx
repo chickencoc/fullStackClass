@@ -6,18 +6,21 @@ import { Context } from './components/Context'
 import Header from './components/Header';
 import List from './components/List';
 import Detail from './components/Detail';
+import Footer from './components/Footer';
+import { langPacka } from './components/Language';
 
 function App() {
   const [dark, setDark] = useState(false);
+  const langPack = langPacka;
+  const [lang, setLang] = useState(langPack[1]);
   const [country, setCountry] = useState("all");
   const [items, setItems] = useState([]);
 
   const fetchCountries = () => {
     const url = `https://restcountries.com/v3.1/${country}`
-    console.log(url);
     fetch(url)
       .then(res => res.json())
-      .then(data => {setItems(data); console.log(data);})
+      .then(data => setItems(data))
       .catch(() => console.error("error"));
   };
   useEffect(() => {fetchCountries()}, [country]);
@@ -29,10 +32,15 @@ function App() {
     else setCountry("all");
   };
 
+  const langChange = (n) => {
+    let cover =  document.getElementById("langBox");
+    setLang(langPack[n]);
+  };
+
   return (
     <div id="background" className={ dark ? "darkmode" : "" }>
       <div id="container">
-        <Context.Provider value={{ dark, setDark, searchInput, searching, items }}>
+        <Context.Provider value={{ dark, setDark, searchInput, searching, items, lang, langChange }}>
           <Header />
           <BrowserRouter>
             <Routes>
@@ -42,6 +50,7 @@ function App() {
           </BrowserRouter>
         </Context.Provider>
       </div>
+      <Footer />
     </div>
   )
 }

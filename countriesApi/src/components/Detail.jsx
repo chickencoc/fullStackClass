@@ -4,14 +4,14 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 function Detail() {
-    const { items } = useContext(Context);
+    const { items, lang } = useContext(Context);
     const { id } = useParams();
     const item = items[id];
 
   return (
     <div id="countryDetailBox">
         <div id="toBack">
-            <Link to="/" ><button>Back</button></Link>
+            <Link to="/" ><button>{lang.backBtn}</button></Link>
         </div>      
         <div id="countryCca2">
             <h2>{item.cca2}</h2>
@@ -22,13 +22,13 @@ function Detail() {
             </div>
             <div id="countryInfomation">
                 <ul>
-                    <li><h3>{item.name.common + " " + item.translations.kor.common}</h3></li>
-                    <li>{item.population}</li>
-                    <li>{item.region}</li>
-                    <li>{item.capital}</li>
-                    <li>{item.subregion}</li>
-                    <li>{item.tld[0]}</li>
-                    <li>{Object.values(item.languages)}</li>
+                    <li><h3>{item.name.common + " " + Object.values(item.translations)[lang.id].common}</h3></li>
+                    <li><h4>{lang.population}: </h4>{item.population}</li>
+                    <li><h4>{lang.region}: </h4>{item.region}</li>
+                    <li><h4>{lang.capital}: </h4>{item.capital}</li>
+                    <li><h4>{lang.subregion}: </h4>{item.subregion}</li>
+                    <li><h4>{lang.tld}: </h4>{item.tld[0]}</li>
+                    <li><h4>{lang.languages}: </h4>{Object.values(item.languages)}</li>
                 </ul>
             </div>
         </div>

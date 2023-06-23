@@ -18,20 +18,28 @@
 
 /* Base */
 * { padding: 0; margin: 0; box-sizing: border-box; font-size: 19px; font-family: 'Noto Sans KR', sans-serif; } 
-button { cursor: pointer; padding: 0.4rem 1rem; border: 2px solid; border-radius: 10px; background: var(--cElement); color: inherit; } 
+button { cursor: pointer; padding: 0.4rem 1rem; border: 2px solid; border-radius: 10px; background: var(--cElement); color: inherit; transition: background-color 0.3s ease-in-out; } 
 input { padding: 0.4rem 1rem; border-radius: 10px; } 
 input:focus { outline: none; } 
 ul, li { list-style: none; } 
 a, a:link, a:visited { text-decoration: none; color: inherit; } 
 
 /* container */
-#background { width: 100%; height: 100vh; background-color: var(--cBackground); color: var(--cText); } 
-#container { max-width: 1440px; margin: 0 auto; } 
+#background { width: 100%; background-color: var(--cBackground); color: var(--cText); transition: background-color 0.3s ease-in-out;} 
+#container { max-width: 1440px; min-height: calc(100vh - 150px); margin: 0 auto; } 
 #container > * { padding: 0 0.8rem; } 
 
 /* header */
 header { width: 100%; height: 100px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--cInput); } 
 header > h1 { font-size: 1.5rem; } 
+header > #headerBtns { display: flex; gap: 10px; } 
+header #langBoxCover { width: 75px; padding: 0.4rem 1rem; border-radius: 10px; position: relative;}
+header #langBoxCover:hover { cursor: pointer;}
+header #langBoxCover:hover #langBox { height: 162px;}
+header #langBoxCover p { position: absolute; z-index: 1;}
+header #langBoxCover #langBox{ width: 100%; height: 100%; border: 2px solid; border-radius: 10px; background: var(--cElement); transition: all 0.3s ease-in-out; position: absolute; top: 0; left: 0; z-index: 0; overflow: hidden;}
+header #langBoxCover #langBox ul { position: absolute; top: 47px; left: 24%; }
+header #darkmodeBtn { width: 136px; } 
 
 /* search */
 main #searchBox { width: 100%; margin: 1.5rem 0; display: flex; justify-content: center; gap: 0.8rem; } 
@@ -40,14 +48,20 @@ main #searchBox #searchBtn { border: 1px solid; }
 
 /* list */
 main #countriesList { display: grid; grid-template-columns: repeat(4, 1fr); justify-items: center; gap: 2rem; } 
-main #countriesList #listContentsBox { width: 320px; box-shadow: 0 0 4px -1px var(--cInput); background-color: var(--cElement); } 
-main #countriesList #listContentsBox img { width: 100%; height: 180px; border-bottom: 1px solid var(--listContentsBoxImg); } 
+main #countriesList #listContentsBox { width: 320px; box-shadow: 0 0 4px -1px var(--cInput); background-color: var(--cElement); transition: background-color 0.3s ease-in-out } 
+main #countriesList #listContentsBox img { width: 100%; height: 180px; border-bottom: 1px solid var(--listContentsBoxImg);  transition: border-bottom 0.3s ease-in-out } 
 main #countriesList #listContentsBox #listContentsInfo { height: 180px; padding: 0.8rem; display: flex; flex-direction: column; justify-content: center; } 
 main #countriesList #listContentsBox #listContentsInfo h2 { margin-bottom: 0.8rem; word-break: keep-all; }
+main #countriesList #listContentsBox #listContentsInfo h3 { display: inline; }
 
 #countryDetailBox #toBack { margin: 1.5rem 0;}
 #countryDetailBox #countryCca2 h2 { font-size: 1.5rem; padding: 0.4rem 0; }
 #countryDetailBox #detailContents { width: 100%; display: flex; gap: 90px; }
-#countryDetailBox #detailContents #countryImg img { width: 720px;}
+#countryDetailBox #detailContents #countryImg img { width: 720px; box-shadow: 0 0 4px -1px var(--cInput);}
 #countryDetailBox #detailContents #countryInfomation h3 { font-size: 1.10rem; line-height: 2.8rem;}
 #countryDetailBox #detailContents #countryInfomation li { line-height: 1.5rem;}
+#countryDetailBox #detailContents #countryInfomation h4 { display: inline;}
+
+/* footer */
+footer {height: 100px; margin-top: 50px; display: flex; flex-direction: column; justify-content: center; align-items: center; line-height: 1.15rem;}
+footer * { font-size: 0.6rem; font-weight: 700;}
