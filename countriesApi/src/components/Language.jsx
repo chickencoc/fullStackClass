@@ -16,7 +16,7 @@ export const langPacka = [
         id: 12,
         type: "KOR",
         pageTitle: "이곳은 어디일까?",
-        inputHolder: "영문 국가명 입력",
+        inputHolder: "검색",
         backBtn: "메인으로",
         population: "인구 수",
         region: "지역",
