@@ -44,8 +44,8 @@ function App() {
           <Header />
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<List />} />
-              <Route path="/detail/:id" element={<Detail />} />
+              <Route path="https://chickencoc.github.io/countriesEx/" element={<List />} />
+              <Route path="https://chickencoc.github.io/countriesEx/detail/:id" element={<Detail />} />
             </Routes>
           </BrowserRouter>
         </Context.Provider>
